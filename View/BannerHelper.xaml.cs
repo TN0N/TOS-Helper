@@ -17,16 +17,11 @@ namespace TOS_Helper.View
     /// <summary>
     /// Interaction logic for BannerHelper.xaml
     /// </summary>
-    public partial class BannerHelper : Window
+    public partial class BannerHelper : UserControl
     {
         public BannerHelper()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

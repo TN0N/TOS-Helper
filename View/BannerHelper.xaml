@@ -1,61 +1,77 @@
-﻿<Window x:Class="TOS_Helper.View.BannerHelper"
+﻿<UserControl x:Class="TOS_Helper.View.BannerHelper"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:num="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:p="clr-namespace:TOS_Helper.Properties"
         xmlns:local="clr-namespace:TOS_Helper.View"
         mc:Ignorable="d"
-        Title="BannerHelper" Height="450" Width="741">
+        >
     <Grid>
-        <TabControl>
-            <TabItem Header="Banner-grid Maker">
-                <Grid>
-                    <GroupBox Header="Central Banner" Margin="10,10,0,317" HorizontalAlignment="Left" Width="316">
-                        <Grid>
-                            <Label Content="X" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                            <TextBox HorizontalAlignment="Left" Margin="27,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-                            <Label Content="Y" HorizontalAlignment="Left" Margin="102,10,0,0" VerticalAlignment="Top"/>
-                            <TextBox HorizontalAlignment="Left" Margin="124,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-                            <Label Content="Z" HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top"/>
-                            <TextBox HorizontalAlignment="Left" Margin="221,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Dimensions" Margin="331,10,0,317" HorizontalAlignment="Left" Width="285">
-                        <Grid>
-                            <Label Content="Rings" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Margin="42,4,0,0"/>
-                            <Label Content="Levels" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,22,0,0"/>
-                            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Margin="42,27,0,0"/>
-                            <RadioButton Content="Centered" HorizontalAlignment="Left" Margin="101,28,0,0" VerticalAlignment="Top"/>
-                            <RadioButton Content="Up" HorizontalAlignment="Left" Margin="173,28,0,0" VerticalAlignment="Top"/>
-                            <RadioButton Content="Down" HorizontalAlignment="Left" Margin="212,28,0,0" VerticalAlignment="Top"/>
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Block Type" Margin="621,10,0,317" HorizontalAlignment="Left" Width="110">
-                        <Grid>
-                            <RadioButton Content="Gold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                            <RadioButton Content="Silver" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0"/>
-                            <RadioButton Content="Bronze" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0"/>
-                        </Grid>
-                    </GroupBox>
-                    <GroupBox Header="Generated Waypoints" Margin="0,119,0,0">
-                        <Grid>
-                            <Button Content="Generate" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="230,7,0,0"/>
-                            <Label Content="Waypoint Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,4,0,0"/>
-                            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="Unnamed" VerticalAlignment="Top" Width="120" Margin="105,8,0,0"/>
-                            <Button Content="Save as Journeymap Waypoints" HorizontalAlignment="Left" Margin="301,7,0,0" VerticalAlignment="Top" Width="176"/>
-                            <DataGrid Margin="10,41,10,10">
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Waypoint Name" Width="*"/>
-                                    <DataGridTextColumn Header="X" Width="*"/>
-                                    <DataGridTextColumn Header="Y" Width="*"/>
-                                    <DataGridTextColumn Header="Z" Width="*"/>
-                                </DataGrid.Columns>
-                            </DataGrid>
-                        </Grid>
-                    </GroupBox>
-                </Grid>
-            </TabItem>
-        </TabControl>
+
+        <GroupBox Header="{ x:Static p:Resources.central_banner }" HorizontalAlignment="Left" Width="121" Margin="0,1,0,0" Height="104" VerticalAlignment="Top">
+            <Grid>
+                <Label Content="{ x:Static p:Resources.x }" HorizontalAlignment="Left" Margin="2,2,0,0" Height="26" VerticalAlignment="Top"/>
+                <num:IntegerUpDown Value="{ Binding CenterX }" HorizontalAlignment="Center" Margin="0,6,0,0" Width="70" Height="20" VerticalAlignment="Top"/>
+                <Label Content="{ x:Static p:Resources.y }" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Center"/>
+                <num:IntegerUpDown Value="{ Binding CenterY }" HorizontalAlignment="Center" VerticalAlignment="Center" Width="70"/>
+                <Label Content="{ x:Static p:Resources.z }" HorizontalAlignment="Left" Margin="2,50,0,0" Height="26" VerticalAlignment="Top"/>
+                <num:IntegerUpDown Value="{ Binding CenterZ }" HorizontalAlignment="Center" Width="70" Margin="0,56,0,0" Height="20" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{ x:Static p:Resources.grid_size }" Margin="126,1,0,0" Width="106" HorizontalAlignment="Left" Height="104" VerticalAlignment="Top">
+            <Grid>
+                <Label Content="{ x:Static p:Resources.width }" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <num:IntegerUpDown Value="{ Binding Width }" Minimum="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="3,20,0,0"/>
+                <Label Content="{x:Static p:Resources.length}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-2,36,0,0"/>
+                <num:IntegerUpDown Value="{Binding Length}" Minimum="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="3,58,0,0"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static p:Resources.levels}"  Margin="237,1,0,0" HorizontalAlignment="Left" Width="212" Height="104" VerticalAlignment="Top">
+            <Grid>
+                <Label Content="{ x:Static p:Resources.levels }" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,-1,0,0"/>
+                <num:IntegerUpDown Value="{ Binding Levels }" Minimum="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="54" Margin="10,23,0,0"/>
+                <GroupBox Header="{x:Static p:Resources.generate_from }" Margin="69,10,0,0">
+                    <Grid>
+                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsMiddleOriented, Mode=OneWay}" Command="{ Binding SetOrientationMiddle }" Content="{ x:Static p:Resources.centered }" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
+                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsTopOriented, Mode=OneWay}" Content="{ x:Static p:Resources.up }" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsBottomOriented, Mode=OneWay}" Content="{ x:Static p:Resources.down }" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{ x:Static p:Resources.block_type }" Margin="454,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Height="104">
+            <Grid>
+                <RadioButton GroupName="Protection" IsChecked="{ Binding IsGoldProtected, Mode=OneWay}" Command="{ Binding SetProtectionGold }" Content="{ x:Static p:Resources.gold }" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,16,0,0"/>
+                <RadioButton GroupName="Protection" IsChecked="{ Binding IsSilverProtected, Mode=OneWay }" Command="{ Binding SetProtectionSilver }" Content="{ x:Static p:Resources.silver }" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.629,1.277" Margin="0,36,0,0"/>
+                <RadioButton GroupName="Protection" IsChecked="{ Binding IsBronzeProtected, Mode=OneWay }" Command="{ Binding SetProtectionBronze }" Content="{ x:Static p:Resources.bronze }" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,56,0,0"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{ x:Static p:Resources.generated_waypoints }" Margin="0,110,0,0" Width="714" HorizontalAlignment="Left" Height="295" VerticalAlignment="Top">
+            <Grid HorizontalAlignment="Center" Width="702">
+                <Button Command="{ Binding GenerateWaypoints }" Content="{ x:Static p:Resources.generate }" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="230,7,0,0"/>
+                <Label Content="{ x:Static p:Resources.waypoint_name }" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,4,0,0"/>
+                <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="{ Binding WaypointName }" VerticalAlignment="Top" Width="120" Margin="105,8,0,0"/>
+                <Button Command="{ Binding SaveJourneymap }" Content="{ x:Static p:Resources.save_as_journeymap_waypoint }" HorizontalAlignment="Left" Margin="301,7,0,0" VerticalAlignment="Top" Width="176"/>
+                <DataGrid ItemsSource="{ Binding Waypoints }" Margin="10,41,10,10" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{ Binding Path=name }" Header="{ x:Static p:Resources.waypoint_name }" Width="*"/>
+                        <DataGridTextColumn Binding="{ Binding Path=x }" Header="{ x:Static p:Resources.x }" Width="*"/>
+                        <DataGridTextColumn Binding="{ Binding Path=y }" Header="{ x:Static p:Resources.y }" Width="*"/>
+                        <DataGridTextColumn Binding="{ Binding Path=z }" Header="{ x:Static p:Resources.z }" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static p:Resources.dimensions}" Margin="571,1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="143" Height="104">
+            <Grid>
+                <CheckBox IsChecked="{Binding OverworldSelected}" Content="{ x:Static p:Resources.overworld}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,3,0,0"/>
+                <CheckBox IsChecked="{Binding NetherSelected}" Content="{ x:Static p:Resources.nether}" Margin="0,18,0,0" VerticalAlignment="Top"/>
+                <CheckBox IsChecked="{Binding EndSelected}" Content="{ x:Static p:Resources.end}" VerticalAlignment="Center"/>
+                <CheckBox IsChecked="{Binding MiddleEarthSelected}" Content="{ x:Static p:Resources.middle_earth}" Margin="0,48,0,0" VerticalAlignment="Top"/>
+                <CheckBox IsChecked="{Binding UtumnoSelected}" Content="{ x:Static p:Resources.utumno}" Margin="0,63,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
     </Grid>
-</Window>
+</UserControl>

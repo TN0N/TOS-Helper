@@ -3,11 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TOS_Helper"
+        xmlns:local="clr-namespace:TOS_Helper" 
+        xmlns:p="clr-namespace:TOS_Helper.Properties" 
+        xmlns:viewmodel="clr-namespace:TOS_Helper.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="496" Width="736" ResizeMode="NoResize">
     <Grid>
-        <Button Content="Banner Helper" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-
+        <TabControl Margin="0,24,0,0">
+            <TabItem Header="{ x:Static p:Resources.banner_grid_maker}">
+                <ContentControl Content="{Binding BannerToolViewModel}"/>
+            </TabItem>
+        </TabControl>
+        <ComboBox ItemsSource="{ Binding Cultures }" SelectedItem="{ Binding SelectedCulture }" DisplayMemberPath="culture" HorizontalAlignment="Left" Margin="594,12,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
