@@ -88,20 +88,20 @@ namespace TOS_Helper.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Center.
+        /// </summary>
+        public static string center {
+            get {
+                return ResourceManager.GetString("center", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Center out.
         /// </summary>
         public static string centered {
             get {
                 return ResourceManager.GetString("centered", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Central banner.
-        /// </summary>
-        public static string central_banner {
-            get {
-                return ResourceManager.GetString("central_banner", resourceCulture);
             }
         }
         

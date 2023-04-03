@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Windows;
 using TOS_Helper.Model;
+using TOS_Helper.ViewModel;
 
 namespace TOS_Helper
 {
@@ -33,7 +34,9 @@ namespace TOS_Helper
         public static ObservableCollection<Culture> _cultures = new ObservableCollection<Culture>()
         {
             new Culture() { id = "en-US", culture = "English"},
-            new Culture() { id = "sl-SI", culture = "Slovenščina"}
+            new Culture() { id = "sl-SI", culture = "slovenščina"},
+            new Culture() { id = "ro", culture = "română"},
+            new Culture() { id="hu", culture = "magyar"}
         };
         /// <summary>
         /// This method changes the language of the application as defined by the parameter.
@@ -51,13 +54,12 @@ namespace TOS_Helper
             
             // Create new window, assign old DataContext to display new language.
             var oldWindow = Application.Current.MainWindow;
-            
+
             Application.Current.MainWindow = new MainWindow()
             {
                 DataContext = oldWindow.DataContext
             };
             Application.Current.MainWindow.Show();
-
             oldWindow.Close();
         }
         protected override void OnStartup(StartupEventArgs e)

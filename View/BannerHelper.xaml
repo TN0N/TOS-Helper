@@ -10,7 +10,7 @@
         >
     <Grid>
 
-        <GroupBox Header="{ x:Static p:Resources.central_banner }" HorizontalAlignment="Left" Width="121" Margin="0,1,0,0" Height="104" VerticalAlignment="Top">
+        <GroupBox Header="{ x:Static p:Resources.center }" HorizontalAlignment="Left" Width="121" Margin="0,1,0,0" Height="104" VerticalAlignment="Top">
             <Grid>
                 <Label Content="{ x:Static p:Resources.x }" HorizontalAlignment="Left" Margin="2,2,0,0" Height="26" VerticalAlignment="Top"/>
                 <num:IntegerUpDown Value="{ Binding CenterX }" HorizontalAlignment="Center" Margin="0,6,0,0" Width="70" Height="20" VerticalAlignment="Top"/>

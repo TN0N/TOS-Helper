@@ -126,11 +126,11 @@
   <data name="bronze" xml:space="preserve">
     <value>Bronze</value>
   </data>
+  <data name="center" xml:space="preserve">
+    <value>Center</value>
+  </data>
   <data name="centered" xml:space="preserve">
     <value>Center out</value>
-  </data>
-  <data name="central_banner" xml:space="preserve">
-    <value>Central banner</value>
   </data>
   <data name="dimensions" xml:space="preserve">
     <value>Dimensions</value>

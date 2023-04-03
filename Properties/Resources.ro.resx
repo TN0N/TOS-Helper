@@ -118,76 +118,76 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="banner_grid_maker" xml:space="preserve">
-    <value>Ustvarjalec mreže zastav</value>
+    <value>Generator de grile de stindarde</value>
   </data>
   <data name="block_type" xml:space="preserve">
-    <value>Tip kocke</value>
+    <value>Tipul blocului</value>
   </data>
   <data name="bronze" xml:space="preserve">
-    <value>Bron</value>
+    <value>Bronz</value>
   </data>
   <data name="center" xml:space="preserve">
-    <value>Sredina</value>
+    <value>Centru</value>
   </data>
   <data name="centered" xml:space="preserve">
-    <value>Sredine navzven</value>
+    <value>Din centru în afară</value>
   </data>
   <data name="dimensions" xml:space="preserve">
-    <value>Dimenzije</value>
+    <value>Dimensiuni</value>
   </data>
   <data name="down" xml:space="preserve">
-    <value>Zgoraj navzdol</value>
+    <value>De jos în sus</value>
   </data>
   <data name="end" xml:space="preserve">
     <value>End</value>
   </data>
   <data name="generate" xml:space="preserve">
-    <value>Generiraj</value>
+    <value>Generează</value>
   </data>
   <data name="generated_waypoints" xml:space="preserve">
-    <value>Generirane točke poti</value>
+    <value>Puncte marcate generate</value>
   </data>
   <data name="generate_from" xml:space="preserve">
-    <value>Generiraj od</value>
+    <value>Generează</value>
   </data>
   <data name="gold" xml:space="preserve">
-    <value>Zlato</value>
+    <value>Aur</value>
   </data>
   <data name="grid_size" xml:space="preserve">
-    <value>Velikost mreže</value>
+    <value>Mărimea grilei</value>
   </data>
   <data name="length" xml:space="preserve">
-    <value>Dolžina</value>
+    <value>Lungime</value>
   </data>
   <data name="levels" xml:space="preserve">
-    <value>Nivoji</value>
+    <value>Niveluri</value>
   </data>
   <data name="middle_earth" xml:space="preserve">
-    <value>Sredjni svet</value>
+    <value>Pământul de Mijloc</value>
   </data>
   <data name="nether" xml:space="preserve">
     <value>Nether</value>
   </data>
   <data name="overworld" xml:space="preserve">
-    <value>Površje</value>
+    <value>Overworld</value>
   </data>
   <data name="save_as_journeymap_waypoint" xml:space="preserve">
-    <value>Shrani Journeymap točke poti</value>
+    <value>Salvează ca punct marcat în Journeymap</value>
   </data>
   <data name="silver" xml:space="preserve">
-    <value>Srebro</value>
+    <value>Argint</value>
   </data>
   <data name="up" xml:space="preserve">
-    <value>Spodaj navzgor</value>
+    <value>De sus în jos</value>
   </data>
   <data name="utumno" xml:space="preserve">
     <value>Utumno</value>
   </data>
   <data name="waypoint_name" xml:space="preserve">
-    <value>Ime točke poti</value>
+    <value>Nume punct marcat</value>
   </data>
   <data name="width" xml:space="preserve">
-    <value>Širina</value>
+    <value>Lățime</value>
   </data>
   <data name="x" xml:space="preserve">
     <value>X</value>
