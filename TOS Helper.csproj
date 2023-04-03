@@ -8,6 +8,7 @@
     <UseWPF>true</UseWPF>
     <SignAssembly>True</SignAssembly>
     <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyFile>sgKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
