@@ -36,7 +36,9 @@ namespace TOS_Helper
             new Culture() { id = "en-US", culture = "English"},
             new Culture() { id = "sl-SI", culture = "slovenščina"},
             new Culture() { id = "ro", culture = "română"},
-            new Culture() { id="hu", culture = "magyar"}
+            new Culture() { id = "hu", culture = "magyar"},
+            new Culture() { id = "cs", culture = "čeština"},
+            new Culture() { id = "nl", culture = "Nederlands"}
         };
         /// <summary>
         /// This method changes the language of the application as defined by the parameter.
