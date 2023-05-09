@@ -35,8 +35,8 @@
                 <GroupBox Header="{x:Static p:Resources.generate_from }" Margin="69,10,0,0">
                     <Grid>
                         <RadioButton GroupName="Orientation" IsChecked="{ Binding IsMiddleOriented, Mode=OneWay}" Command="{ Binding SetOrientationMiddle }" Content="{ x:Static p:Resources.centered }" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top"/>
-                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsTopOriented, Mode=OneWay}" Content="{ x:Static p:Resources.up }" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
-                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsBottomOriented, Mode=OneWay}" Content="{ x:Static p:Resources.down }" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsTopOriented, Mode=OneWay}" Command="{ Binding SetOrientationTop }" Content="{ x:Static p:Resources.up }" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+                        <RadioButton GroupName="Orientation" IsChecked="{ Binding IsBottomOriented, Mode=OneWay}" Command="{ Binding SetOrientationBottom }" Content="{ x:Static p:Resources.down }" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
                     </Grid>
                 </GroupBox>
             </Grid>

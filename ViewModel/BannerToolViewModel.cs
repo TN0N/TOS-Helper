@@ -335,7 +335,7 @@ namespace TOS_Helper.ViewModel
         }
         private void CommandGenerateWaypoints()
         {
-            this.Waypoints = WaypointGenerator.GenerateWaypoints(_waypointName, _centerX, _centerY, _centerZ, _width, _length, _levels, _protectionRadius, _orientation, _overworldSelected, _netherSelected, _endSelected, _middleEarthSelected, _endSelected);
+            this.Waypoints = WaypointGenerator.GenerateWaypoints(_waypointName, _centerX, _centerY, _centerZ, _width, _length, _levels, _protectionRadius, _orientation, _overworldSelected, _netherSelected, _endSelected, _middleEarthSelected, _utumnoSelected);
         }
         private bool CanGenerateWaypoints() => OverworldSelected || NetherSelected || EndSelected || MiddleEarthSelected || UtumnoSelected;
 

@@ -41,7 +41,7 @@ namespace TOS_Helper.Model
             // Figure out from which Y level to start.
             switch (orientation)
             {
-                case Defines.ORIENTATION.BOTTOM: startingY = y + radius * levels; break;
+                case Defines.ORIENTATION.BOTTOM: startingY = y - radius * levels; break;
                 case Defines.ORIENTATION.MIDDLE: startingY = y + radius * Math.Floor(levels / 2); break;
             }
             // Generate the waypoints.
